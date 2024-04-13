@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //     function fun(a){
+    // document.writeln("i am : "+ a)
+    //         }
+    //         fun.call(this, "shivang");
+
+
+    // call()
+    function emp(id, name){
+     this.id = id;
+     this.name = name;
+    }
+
+    function Pemp(id, name , salary){
+       emp.call(this, id, name);
+       this.salary = salary;
+    }
+
+    function Temp(id, name , salary , time){
+        Pemp.call(this, id, name, salary);
+        this.time = time;
+    }
+
+    let pEmp = new Pemp(10001,"Aman",10);
+    let tEmp = new Pemp(454,"shivang",100 , 1);
+
+
+    document.writeln(pEmp.id + " " +pEmp.name + " "+ pEmp.salary );
+
+    document.writeln('<br>' );
+    
+
+
+    document.writeln(tEmp.id + " " +tEmp.name + " "+ tEmp.salary );
+
+
+    // apply()
+
+//     function greet(name, age){
+//         document.writeln("i am "+ name + " "  + age);
+        
+//     }
+   
+    
+// greet.apply(this, ["dipak" , 19])
+// document.writeln('<br>' );
+// document.writeln('<br>' );
+
+// var arr = [1,2,33,4,5,5,5,6,87];
+//    let max = Math.max.apply(this, arr)
+//    let min = Math.min.apply(this, arr)
+//    document.writeln(max);
+//    document.writeln(min);
+   
+    
+document.writeln('<br>' );
+
+// bind()
+
+let website = {
+    name: "System Boss",
+    getName: function(){
+        return this.name;
+    }
+}
+
+let webiste2 ={
+    name : "Yash web 2"
+}
+
+let a = website.getName; // System Boss
+
+
+let  b  = a.bind(webiste2);
+document.writeln(b());
+
+
+let abc = {
+    name: " Yash  bhai ",
+    eyeColor : "black",
+}
+
+document.writeln(abc.name);
+
+    
+
+     
+    </script>
+</body>
+</html>

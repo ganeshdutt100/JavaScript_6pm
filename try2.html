@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+  --bg-card: #27272a;
+  --primary: #6d28d9;
+  --primary-800: #4c1d95;
+  --primary-shadow: #2e1065;
+  --light: #d9d9d9;
+  --zinc-800: #18181b;
+  --bg-linear: linear-gradient(0deg, var(--primary) 50%, var(--light) 125%);
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  padding: 1rem;
+  width: 10rem;
+  background-color: var(--bg-card);
+
+  border-radius: 1rem;
+}
+
+.image_container {
+  overflow: hidden;
+  cursor: pointer;
+
+  position: relative;
+  z-index: 5;
+
+  width: 100%;
+  height: 8rem;
+  background-color: var(--primary-800);
+
+  border-radius: 0.5rem;
+}
+
+.image_container .image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 3rem;
+  fill: var(--light);
+}
+
+.title {
+  overflow: clip;
+  text-align: center;
+
+  width: 100%;
+
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--light);
+  text-transform: capitalize;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+}
+
+.size {
+  font-size: 0.75rem;
+  color: var(--light);
+}
+
+.list-size {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+
+  margin-top: 0.25rem;
+}
+
+.list-size .item-list {
+  list-style: none;
+}
+
+.list-size .item-list-button {
+  cursor: pointer;
+ /* border: 1px solid white; */
+  padding: 0.5rem;
+  background-color: white;
+
+  font-size: 0.75rem;
+  color: var(--light);
+
+  border: 2px solid var(--zinc-800);
+  border-radius: 0.25rem;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.item-list-button:hover {
+  border: 2px solid var(--light);
+}
+.item-list-button:focus {
+  background-color: var(--primary);
+
+  border: 2px solid var(--primary-shadow);
+
+  box-shadow: inset 0px 1px 4px var(--primary-shadow);
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--light);
+}
+
+.cart-button {
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+
+  padding: 0.5rem;
+  width: 100%;
+  background-image: var(--bg-linear);
+
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--light);
+  text-wrap: nowrap;
+
+  border: 2px solid hsla(262, 83%, 58%, 0.5);
+  border-radius: 0.5rem;
+  box-shadow: inset 0 0 0.25rem 1px var(--light);
+}
+
+.cart-button .cart-icon {
+  width: 1rem;
+}
+.date{
+    color: white;
+    border: 2px solid hsla(262, 77%, 72%, 0.5);
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    text-align: center;
+    margin: auto;
+    border-radius:50% ;
+    padding: 10px;
+
+}
+.row1{
+    display: flex;
+    justify-content: space-around;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    /* justify-content: space-around; */
+    gap: 20px;
+}
+
+.empty{
+margin: 0 auto;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 9px 100px 0 100px;
+  border-color: #fc1919 transparent transparent transparent;
+  margin-bottom: 20px;
+
+}
+.text{
+     margin-bottom: 0;
+}
+
+    </style>
+</head>
+<body>
+     <h1 class="text" style="text-align: center; font-family: sans-serif;">April Time -Table</h1>
+    <div class="empty"></div>
+<div class="main">
+    <div class="row1">
+        <div class="card">
+            <div class="date">
+            14
+            </div>
+            <div class="title">
+              <span>Sunday</span>
+            </div>
+            <div class="size">
+             
+              <ul class="list-size" style="padding-left: 0;">
+                <li class="item-list"> JS  <button  class="item-list-button"> </button></li>
+                <li class="item-list">React<button  class="item-list-button"></button></li>
+                <li class="item-list">DSA  <button  class="item-list-button"></button></li>
+                <li class="item-list">GYM  <button  class="item-list-button"></button></li>
+                <li class="item-list">Read <button  class="item-list-button"></button></li>
+              </ul>
+            </div>
+           
+          </div>
+
+          <!-- 2 -->
+          <div class="card">
+            <div class="date">
+            15
+            </div>
+            <div class="title">
+              <span>Monday</span>
+            </div>
+            <div class="size">
+             
+              <ul class="list-size" style="padding-left: 0;">
+                <li class="item-list"> JS  <button  class="item-list-button"> </button></li>
+                <li class="item-list">React<button  class="item-list-button"></button></li>
+                <li class="item-list">DSA  <button  class="item-list-button"></button></li>
+                <li class="item-list">GYM  <button  class="item-list-button"></button></li>
+                <li class="item-list">Read <button  class="item-list-button"></button></li>
+              </ul>
+            </div>
+           
+          </div>
+          <!-- 3 -->
+          <div class="card">
+            <div class="date">
+            16
+            </div>
+            <div class="title">
+              <span>Tuesday</span>
+            </div>
+            <div class="size">
+             
+              <ul class="list-size" style="padding-left: 0;">
+                <li class="item-list"> JS  <button  class="item-list-button"> </button></li>
+                <li class="item-list">React<button  class="item-list-button"></button></li>
+                <li class="item-list">DSA  <button  class="item-list-button"></button></li>
+                <li class="item-list">GYM  <button  class="item-list-button"></button></li>
+                <li class="item-list">Read <button  class="item-list-button"></button></li>
+              </ul>
+            </div>
+           
+          </div>
+          <!-- 4 -->
+          <div class="card">
+            <div class="date">
+            17
+            </div>
+            <div class="title">
+              <span>Wednesday</span>
+            </div>
+            <div class="size">
+             
+              <ul class="list-size" style="padding-left: 0;">
+                <li class="item-list"> JS  <button  class="item-list-button"> </button></li>
+                <li class="item-list">React<button  class="item-list-button"></button></li>
+                <li class="item-list">DSA  <button  class="item-list-button"></button></li>
+                <li class="item-list">GYM  <button  class="item-list-button"></button></li>
+                <li class="item-list">Read <button  class="item-list-button"></button></li>
+              </ul>
+            </div>
+           
+          </div>
+        
+         
+          
+    </div>
+
+     <!-- 2 row -->
+     <div class="row1">
+          <!-- 5 -->
+          <div class="card">
+            <div class="date">
+            18
+            </div>
+            <div class="title">
+              <span>Thursday</span>
+            </div>
+            <div class="size">
+             
+              <ul class="list-size" style="padding-left: 0;">
+                <li class="item-list"> JS  <button  class="item-list-button"> </button></li>
+                <li class="item-list">React<button  class="item-list-button"></button></li>
+                <li class="item-list">DSA  <button  class="item-list-button"></button></li>
+                <li class="item-list">GYM  <button  class="item-list-button"></button></li>
+                <li class="item-list">Read <button  class="item-list-button"></button></li>
+              </ul>
+            </div>
+           
+          </div>
+          <!-- 6 -->
+          <div class="card">
+            <div class="date">
+            19
+            </div>
+            <div class="title">
+              <span>Friday</span>
+            </div>
+            <div class="size">
+             
+              <ul class="list-size" style="padding-left: 0;">
+                <li class="item-list"> JS  <button  class="item-list-button"> </button></li>
+                <li class="item-list">React<button  class="item-list-button"></button></li>
+                <li class="item-list">DSA  <button  class="item-list-button"></button></li>
+                <li class="item-list">GYM  <button  class="item-list-button"></button></li>
+                <li class="item-list">Read <button  class="item-list-button"></button></li>
+              </ul>
+            </div>
+           
+          </div>
+          <!-- 7 -->
+          <div class="card">
+            <div class="date">
+            20
+            </div>
+            <div class="title">
+              <span>Saturday</span>
+            </div>
+            <div class="size">
+             
+              <ul class="list-size" style="padding-left: 0;">
+                <li class="item-list"> JS  <button  class="item-list-button"> </button></li>
+                <li class="item-list">React<button  class="item-list-button"></button></li>
+                <li class="item-list">DSA  <button  class="item-list-button"></button></li>
+                <li class="item-list">GYM  <button  class="item-list-button"></button></li>
+                <li class="item-list">Read <button  class="item-list-button"></button></li>
+              </ul>
+            </div>
+           
+          </div>
+
+
+
+          <div class="card">
+            <div class="date">
+            21
+            </div>
+            <div class="title">
+              <span>Sunday</span>
+            </div>
+            <div class="size">
+             
+              <ul class="list-size" style="padding-left: 0;">
+                <li class="item-list"> JS  <button  class="item-list-button"> </button></li>
+                <li class="item-list">React<button  class="item-list-button"></button></li>
+                <li class="item-list">DSA  <button  class="item-list-button"></button></li>
+                <li class="item-list">GYM  <button  class="item-list-button"></button></li>
+                <li class="item-list">Read <button  class="item-list-button"></button></li>
+              </ul>
+            </div>
+           
+          </div>
+     </div>
+
+     <div class="row1">
+        
+
+          <!-- 2 -->
+          <div class="card">
+            <div class="date">
+            22
+            </div>
+            <div class="title">
+              <span>Monday</span>
+            </div>
+            <div class="size">
+             
+              <ul class="list-size" style="padding-left: 0;">
+                <li class="item-list"> JS  <button  class="item-list-button"> </button></li>
+                <li class="item-list">React<button  class="item-list-button"></button></li>
+                <li class="item-list">DSA  <button  class="item-list-button"></button></li>
+                <li class="item-list">GYM  <button  class="item-list-button"></button></li>
+                <li class="item-list">Read <button  class="item-list-button"></button></li>
+              </ul>
+            </div>
+           
+          </div>
+          <!-- 3 -->
+          <div class="card">
+            <div class="date">
+            23
+            </div>
+            <div class="title">
+              <span>Tuesday</span>
+            </div>
+            <div class="size">
+             
+              <ul class="list-size" style="padding-left: 0;">
+                <li class="item-list"> JS  <button  class="item-list-button"> </button></li>
+                <li class="item-list">React<button  class="item-list-button"></button></li>
+                <li class="item-list">DSA  <button  class="item-list-button"></button></li>
+                <li class="item-list">GYM  <button  class="item-list-button"></button></li>
+                <li class="item-list">Read <button  class="item-list-button"></button></li>
+              </ul>
+            </div>
+           
+          </div>
+          <!-- 4 -->
+          <div class="card">
+            <div class="date">
+            24
+            </div>
+            <div class="title">
+              <span>Wednesday</span>
+            </div>
+            <div class="size">
+             
+              <ul class="list-size" style="padding-left: 0;">
+                <li class="item-list"> JS  <button  class="item-list-button"> </button></li>
+                <li class="item-list">React<button  class="item-list-button"></button></li>
+                <li class="item-list">DSA  <button  class="item-list-button"></button></li>
+                <li class="item-list">GYM  <button  class="item-list-button"></button></li>
+                <li class="item-list">Read <button  class="item-list-button"></button></li>
+              </ul>
+            </div>
+           
+          </div>
+          <!-- 5 -->
+          <div class="card">
+            <div class="date">
+            25
+            </div>
+            <div class="title">
+              <span>Thursday</span>
+            </div>
+            <div class="size">
+             
+              <ul class="list-size" style="padding-left: 0;">
+                <li class="item-list"> JS  <button  class="item-list-button"> </button></li>
+                <li class="item-list">React<button  class="item-list-button"></button></li>
+                <li class="item-list">DSA  <button  class="item-list-button"></button></li>
+                <li class="item-list">GYM  <button  class="item-list-button"></button></li>
+                <li class="item-list">Read <button  class="item-list-button"></button></li>
+              </ul>
+            </div>
+           
+          </div>
+
+         
+          
+    </div>
+
+
+
+    <div class="row1">
+                  <!-- 6 -->
+                  <div class="card">
+                    <div class="date">
+                    26
+                    </div>
+                    <div class="title">
+                      <span>Friday</span>
+                    </div>
+                    <div class="size">
+                     
+                      <ul class="list-size" style="padding-left: 0;">
+                        <li class="item-list"> JS  <button  class="item-list-button"> </button></li>
+                        <li class="item-list">React<button  class="item-list-button"></button></li>
+                        <li class="item-list">DSA  <button  class="item-list-button"></button></li>
+                        <li class="item-list">GYM  <button  class="item-list-button"></button></li>
+                        <li class="item-list">Read <button  class="item-list-button"></button></li>
+                      </ul>
+                    </div>
+                   
+                  </div>
+                  <!-- 7 -->
+                  <div class="card">
+                    <div class="date">
+                    27
+                    </div>
+                    <div class="title">
+                      <span>Saturday</span>
+                    </div>
+                    <div class="size">
+                     
+                      <ul class="list-size" style="padding-left: 0;">
+                        <li class="item-list"> JS  <button  class="item-list-button"> </button></li>
+                        <li class="item-list">React<button  class="item-list-button"></button></li>
+                        <li class="item-list">DSA  <button  class="item-list-button"></button></li>
+                        <li class="item-list">GYM  <button  class="item-list-button"></button></li>
+                        <li class="item-list">Read <button  class="item-list-button"></button></li>
+                      </ul>
+                    </div>
+                   
+                  </div>
+
+                  <div class="card">
+                    <div class="date">
+                    28
+                    </div>
+                    <div class="title">
+                      <span>Sunday</span>
+                    </div>
+                    <div class="size">
+                     
+                      <ul class="list-size" style="padding-left: 0;">
+                        <li class="item-list"> JS  <button  class="item-list-button"> </button></li>
+                        <li class="item-list">React<button  class="item-list-button"></button></li>
+                        <li class="item-list">DSA  <button  class="item-list-button"></button></li>
+                        <li class="item-list">GYM  <button  class="item-list-button"></button></li>
+                        <li class="item-list">Read <button  class="item-list-button"></button></li>
+                      </ul>
+                    </div>
+                   
+                  </div>
+        
+                  <!-- 2 -->
+                  <div class="card">
+                    <div class="date">
+                    29
+                    </div>
+                    <div class="title">
+                      <span>Monday</span>
+                    </div>
+                    <div class="size">
+                     
+                      <ul class="list-size" style="padding-left: 0;">
+                        <li class="item-list"> JS  <button  class="item-list-button"> </button></li>
+                        <li class="item-list">React<button  class="item-list-button"></button></li>
+                        <li class="item-list">DSA  <button  class="item-list-button"></button></li>
+                        <li class="item-list">GYM  <button  class="item-list-button"></button></li>
+                        <li class="item-list">Read <button  class="item-list-button"></button></li>
+                      </ul>
+                    </div>
+                   
+                  </div>
+    </div>
+    <!-- 3 -->
+    <div class="row1">
+       
+          <!-- 3 -->
+          <div class="card">
+            <div class="date">
+            30
+            </div>
+            <div class="title">
+              <span>Tuesday</span>
+            </div>
+            <div class="size">
+             
+              <ul class="list-size" style="padding-left: 0;">
+                <li class="item-list"> JS  <button  class="item-list-button"> </button></li>
+                <li class="item-list">React<button  class="item-list-button"></button></li>
+                <li class="item-list">DSA  <button  class="item-list-button"></button></li>
+                <li class="item-list">GYM  <button  class="item-list-button"></button></li>
+                <li class="item-list">Read <button  class="item-list-button"></button></li>
+              </ul>
+            </div>
+           
+          </div>
+          <!-- 4 -->
+          <div class="card">
+            <div class="date">
+            1 
+            </div>
+            <div class="title"> 
+                <span>(May)</span>
+              <span>Wednesday</span>
+            </div>
+            <div class="size">
+             
+              <ul class="list-size" style="padding-left: 0;">
+                <li class="item-list"> JS  <button  class="item-list-button"> </button></li>
+                <li class="item-list">React<button  class="item-list-button"></button></li>
+                <li class="item-list">DSA  <button  class="item-list-button"></button></li>
+                <li class="item-list">GYM  <button  class="item-list-button"></button></li>
+                <li class="item-list">Read <button  class="item-list-button"></button></li>
+              </ul>
+            </div>
+           
+          </div>
+          <!-- 5 -->
+          <div class="card">
+            <div class="date">
+            2
+            </div>
+            <div class="title">
+              <span>Thursday</span>
+            </div>
+            <div class="size">
+             
+              <ul class="list-size" style="padding-left: 0;">
+                <li class="item-list"> JS  <button  class="item-list-button"> </button></li>
+                <li class="item-list">React<button  class="item-list-button"></button></li>
+                <li class="item-list">DSA  <button  class="item-list-button"></button></li>
+                <li class="item-list">GYM  <button  class="item-list-button"></button></li>
+                <li class="item-list">Read <button  class="item-list-button"></button></li>
+              </ul>
+            </div>
+           
+          </div>
+          <!-- 6 -->
+          <div class="card">
+            <div class="date">
+            3
+            </div>
+            <div class="title">
+              <span>Friday</span>
+            </div>
+            <div class="size">
+             
+              <ul class="list-size" style="padding-left: 0;">
+                <li class="item-list"> JS  <button  class="item-list-button"> </button></li>
+                <li class="item-list">React<button  class="item-list-button"></button></li>
+                <li class="item-list">DSA  <button  class="item-list-button"></button></li>
+                <li class="item-list">GYM  <button  class="item-list-button"></button></li>
+                <li class="item-list">Read <button  class="item-list-button"></button></li>
+              </ul>
+            </div>
+           
+          </div>
+          <!-- 7 -->
+       
+    
+
+
+</div>
+    <!-- 5 -->
+    
+</body>
+</html>
