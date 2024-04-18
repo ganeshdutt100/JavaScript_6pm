@@ -29,12 +29,12 @@
 
 // nested loop
 
- for(let a =1 ; a <= 4; a++){
-    for(let b =1; b <= 4; b++){
-        document.writeln(a + " : "+ b + "<br>");
+//  for(let a =1 ; a <= 4; a++){
+//     for(let b =1; b <= 4; b++){
+//         document.writeln(a + " : "+ b + "<br>");
         
-    }
- }
+//     }
+//  }
 
 
 
