@@ -1,6 +1,6 @@
  let demo =  document.getElementById('demo')
  
-function fun(name){
+function shivang(name){
     // window.alert("hello world!");
 //    let a =  window.confirm("hello world!");
 //     if(a){
@@ -26,6 +26,8 @@ function fun(name){
 
 
 //  demo.innerHTML = "shivang name " + name ;
+let date  = new Date();
+ demo.innerHTML = date;
 
 
 }
@@ -33,13 +35,23 @@ function fun(name){
 
 // setTimeout(fun , 3000 , "shivang" )
 
+ setInterval(shivang,1000)
+
+  let a = setInterval(()=>{
+demo.innerHTML = "shivang name "
+ },2000)
 
 
-let a = setTimeout(()=>{
-    demo.innerHTML = "hello shivang"
-},2000)
+ window.clearInterval(a)
+
+
+// let a = setTimeout(()=>{
+//     demo.innerHTML = "hello shivang"
+// },2000)
 
 // window.clearTimeout(a);
+
+
 
 
 
