@@ -56,3 +56,7 @@ const result = Object.assign(target, source);
 console.log(result); // { a: 1, b: 3, c: 4 }
 console.log(target); // { a: 1, b: 3, c: 4 }
 console.log(source); // { a: 1, b: 3, c: 4 }
+
+
+
+
