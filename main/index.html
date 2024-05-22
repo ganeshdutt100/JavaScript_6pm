@@ -22,6 +22,7 @@
 
     <button onclick="fun()">click me </button>
 
+    z
     <p id="demo"></p>
     <!-- <script src="main3.js"></script>
     <script src="main4.js"></script> -->
@@ -41,6 +42,9 @@
 
 
       <div id="box"></div>
+      <input type="text" id="textid">
+      <p id="pik"></p>
+      <button>click me </button>
 
       <script>
         colorBox =  document.getElementById('box');
@@ -56,13 +60,43 @@ colorBox.addEventListener('dblclick' , function(){
 });
 
 // mouseover
-colorBox.addEventListener('mouseover' , function(){
-    this.style.backgroundColor = 'yellow'
+// colorBox.addEventListener('mouseover' , function(){
+//     this.style.backgroundColor = 'yellow'
+// });
+// // mouseout
+// colorBox.addEventListener('mouseout' , function(){
+//     this.style.backgroundColor = 'black'
+// });
+
+
+
+// mouseup
+colorBox.addEventListener('mouseup' , function(){
+    this.style.backgroundColor = 'white'
 });
-// mouseout
-colorBox.addEventListener('mouseout' , function(){
-    this.style.backgroundColor = 'black'
+
+
+// mousedown
+colorBox.addEventListener('mousedown' , function(){
+    this.style.backgroundColor = 'pink'
 });
+
+// key press 
+
+let input =  document.getElementById('textid')
+let result =  document.getElementById('pik')
+
+ 
+// input.addEventListener('keyup',function(event){
+//     result.textContent = `key pressed: ${event.key}`;
+// })
+// input.addEventListener('keydown',function(event){
+//     result.textContent = `key Yash: ${event.key}`;
+// })
+input.addEventListener('keypress',function(event){
+    result.textContent = `key Yash: ${event.key}`;
+})
+
 
       </script>
 
