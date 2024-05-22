@@ -42,6 +42,30 @@
 
       <div id="box"></div>
 
+      <script>
+        colorBox =  document.getElementById('box');
+        
+//  click 
+colorBox.addEventListener('click' , function(){
+    this.style.backgroundColor = 'green'
+});
+
+// dbl click 
+colorBox.addEventListener('dblclick' , function(){
+    this.style.backgroundColor = 'blue'
+});
+
+// mouseover
+colorBox.addEventListener('mouseover' , function(){
+    this.style.backgroundColor = 'yellow'
+});
+// mouseout
+colorBox.addEventListener('mouseout' , function(){
+    this.style.backgroundColor = 'black'
+});
+
+      </script>
+
   
 </body>
 </html>
