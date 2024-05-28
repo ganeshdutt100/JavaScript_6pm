@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.393);
+    color: white;
+    backdrop-filter: blur(20px);
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+
+  }
+
+  .laptopSize {
+    display: none;
+    gap: 20px;
+    list-style-type: none;
+  }
+
+  .phoneSize {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    list-style-type: none;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.727);
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    height: 100vh;
+    backdrop-filter: blur(20px);
+    padding-top: 10px;
+    cursor: pointer;
+  }
+
+  .section {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .section img {
+    width: 100%;
+    height: 100%;
+  }
+
+  @media only screen and (min-width:700px) {
+    .laptopSize {
+      display: flex;
+      gap: 20px;
+      list-style-type: none;
+    }
+
+    .bar {
+      display: none;
+    }
+
+
+  }
+</style>
+
+<body>
+  <nav>
+    <div class="logo">Logo</div>
+    <div>
+      <ul class="laptopSize">
+
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+        <li>Services</li>
+        <li>Project</li>
+      </ul>
+      <ul class="phoneSize">
+        <li onclick="hide()"><i class="fa-solid fa-xmark"></i></li>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+        <li>Services</li>
+        <li>Project</li>
+      </ul>
+    </div>
+    <div class="bar" onclick="show()">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </nav>
+  <div class="section">
+    <img
+      src="https://img.freepik.com/free-photo/indian-man-hacker-using-computers-stealing-data-desk_231208-3619.jpg?t=st=1716896427~exp=1716900027~hmac=6482740b9b731c067f258cb9fa64483f6ec3c9e68120213879d75495313140bc&w=900"
+      alt="">
+  </div>
+
+  <script>
+
+  </script>
+</body>
+
+</html>
