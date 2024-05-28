@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    span {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <form action="">
+    Password : <input type="password" id="password"> <span id="pass"></span> <br>
+    Confirm Password : <input type="password" id="confirmPassword"> <span id="conPass"></span> <br>
+    <button type="button" onclick="validatePassword()">submit</button>
+  </form>
+  <script>
+    function validatePassword() {
+      let password = document.getElementById('password').value;
+      let confirmPassword =
+        document.getElementById('confirmPassword').value;
+      let pass = document.getElementById('pass');
+      let conPass = document.getElementById('conPass');
+      pass.innerHTML = ""; // Clear previous error message  (span)
+      conPass.innerHTML = ""; // Clear previous error message (span)
+      if (password.length < 6) {
+        pass.innerHTML = "Password must be at least 6 characters";
+      } else if (password !== confirmPassword) {
+        conPass.innerHTML = "Passwords don't match!";
+      } else {
+        // Form submission here if validation passes
+        // For demonstration purposes, I'm just alerting success
+        alert("Form submitted successfully!");
+      }
+    }
+  </script>
+</body>
+
+</html>
