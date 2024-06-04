@@ -8,10 +8,34 @@
 </head>
 
 <body>
+  <p id="demo"></p>
   <script>
-    const myPromise = new Promise((resolve, reject) => {
+    function demoDisaplay(data) {
+      document.getElementById('demo').innerHTML = data;
 
+    }
+
+    const myPromise = new Promise((resolve, reject) => {
+      let a = 30;
+      if (a == 30) {
+        resolve("Data match");
+      }
+
+      else {
+        reject("Not match")
+      }
     });
+
+
+    myPromise.then(
+      function (value) {
+        demoDisaplay(value);
+      },
+      function (error) {
+        demoDisaplay(error);
+      }
+    );
+
   </script>
 </body>
 
