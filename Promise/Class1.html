@@ -17,7 +17,7 @@
 
     const myPromise = new Promise((resolve, reject) => {
       let a = 30;
-      if (a == 30) {
+      if (a == 90) {
         resolve("Data match");
       }
 
@@ -30,11 +30,10 @@
     myPromise.then(
       function (value) {
         demoDisaplay(value);
-      },
-      function (error) {
-        demoDisaplay(error);
-      }
-    );
+      }).catch((err) => {
+        demoDisaplay(err);
+      });
+    ;
 
   </script>
 </body>
