@@ -2,38 +2,54 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
 </head>
 
 <body>
   <p id="demo"></p>
   <script>
-    function demoDisaplay(data) {
-      document.getElementById('demo').innerHTML = data;
+    // function demoDisaplay(data) {
+    //   document.getElementById('demo').innerHTML = data;
 
-    }
+    // }
 
-    const myPromise = new Promise((resolve, reject) => {
-      let a = 30;
-      if (a == 90) {
-        resolve("Data match");
-      }
+    // const myPromise = new Promise((resolve, reject) => {
+    //   let a = 30;
+    //   if (a == 90) {
+    //     resolve("Data match");
+    //   }
 
-      else {
-        reject("Not match")
-      }
+    //   else {
+    //     reject("Not match")
+    //   }
+    // });
+
+    // myPromise.then(
+    //   function (value) {
+    //     demoDisaplay(value);
+    //   }).catch((err) => {
+    //     demoDisaplay(err);
+    //   });
+    // ;
+
+    const promise = new Promise((a, b) => {
+      setTimeout(() => {
+        a(1);
+      }, 1000);
     });
 
+    promise.then((value) => {
+      alert(value)
 
-    myPromise.then(
-      function (value) {
-        demoDisaplay(value);
-      }).catch((err) => {
-        demoDisaplay(err);
-      });
-    ;
+      return value + 1;
+    }).then((value) => {
+      alert(value)
+      return value + 1;
+    }).then((value) => {
+      alert(value);
+    })
 
   </script>
 </body>
