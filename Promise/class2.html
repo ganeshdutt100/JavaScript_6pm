@@ -49,11 +49,30 @@
     // Syntax 
     // Promise.race([..promises..]);
 
-    let Aman = Promise.race([
-      new Promise(reject => setTimeout(reject("it's a Error.. "), 2000)),
+    // let Aman = Promise.race([
+    //   new Promise(reject => setTimeout(reject("it's a Error.. "), 2000)),
 
-      new Promise(resolve => setTimeout(resolve(1), 3000)),
-      new Promise(resolve => setTimeout(resolve(3), 1000))
+    //   new Promise(resolve => setTimeout(resolve(1), 3000)),
+    //   new Promise(resolve => setTimeout(resolve(3), 1000))
+    // ])
+
+    // Aman.then(alert);
+
+
+
+    // Syntax 
+    // Promise.any([..promises..]);
+
+    let Aman = Promise.any([
+      new Promise((resolve, reject) => setTimeout(reject("it's a Error.. "), 2000)),
+      new Promise((resolve, reject) => setTimeout(reject("it's a Error 2.. "), 5000)),
+      new Promise((resolve, reject) => setTimeout(reject("it's a Error 3.. "), 3000)),
+      new Promise((resolve, reject) => setTimeout(reject("it's a Error 4.. "), 4000)),
+      // new Promise((resolve, reject) => setTimeout(resolve(2), 1000)),
+      new Promise((resolve, reject) => setTimeout(resolve(1), 3000))
+
+
+
     ])
 
     Aman.then(alert);
