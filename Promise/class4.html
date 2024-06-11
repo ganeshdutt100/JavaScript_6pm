@@ -9,12 +9,15 @@
 
 <body>
   <script>
-    let promise = fetch('text/Text1.txt');
+    let promise = fetch('text/Tet1.txt');
     promise.then((value) => {
-      console.log(value.status);
-      console.log(value.text());
+      console.log(value.status)
+      return value.text();
+    }).then((data) => {
+      console.log(data);
 
-    })
+    }).catch((err) => console.log("can't fetch")
+    )
   </script>
 </body>
 
