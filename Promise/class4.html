@@ -27,7 +27,9 @@
 
       return value.json();
     }).then((data) => {
-      console.log(data);
+      for (let a in data) {
+        document.writeln(`${data[a].id} :   ${data[a].title} -  ${data[a].completed} <br>`);
+      }
 
     }).catch((err) => console.log("can't fetch")
     )
